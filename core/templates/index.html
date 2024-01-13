@@ -1,0 +1,11 @@
+{% load filters %}
+
+<html>
+  <body>
+    <h1>Django coffee house</h1>
+
+    {% for order in orders %}
+      {% show_latest_posts order %}
+    {% endfor %}
+  </body>
+</html>

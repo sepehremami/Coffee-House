@@ -1,0 +1,10 @@
+<h3>{{ order.title }}</h3>
+
+<form method="post" >
+  {% csrf_token %}
+  {{ order.status }}
+  {{ form.as_p }}
+
+  <input type="hidden" value="{{ order.id }}" name="id" />
+  <input type="submit" value="update" />
+</form>
